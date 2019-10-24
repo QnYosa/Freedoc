@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+projet 1 Freedoc
 
-Things you may want to cover:
+Freedoc est une application rails, son but mettre la concu en pls.
 
-* Ruby version
+step 1 faites le bundle install
 
-* System dependencies
+step 2 lancer le seed rails db:seed
 
-* Configuration
+Il y a la gem time_print si tu veux voir des beaux tableaux et la gem faker pour générer le seed plus facilement
 
-* Database creation
+et voila vous avez géneré une table de client, de doctor, de rdv, de ville et de specialité
 
-* Database initialization
+Pour rappel:
 
-* How to run the test suite
+Un appointment ne peut avoir qu'un seul doctor, mais un doctor peut avoir plusieurs appointment.
+Un appointment ne peut avoir qu'un seul patient, mais un patient peut avoir plusieurs appointment.
+Un doctor peut avoir plusieurs patients, au travers des appointments, et vice versa.
+Chaque docteur, patient, et rendez-vous est lié à une city. Une city peut avoir plusieurs docteurs, patients, et rendez-vous.
+Un docteur aurait plusieurs specialty, et une specialty pourrait concerner plusieurs doctor.
 
-* Services (job queues, cache servers, search engines, etc.)
+Step 3
 
-* Deployment instructions
 
+Pour trouver les spécialités d'un docteur 7 :
+
+Doctor.find(7).joins
+Ensuite il faut faire une boucle pour afficher chaque specialty id
 * ...
+
+voilà, voilà 
